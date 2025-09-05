@@ -70,7 +70,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-gray-300 mb-6 font-urbanist-normal leading-relaxed" style={{ fontWeight: 400 }}>
-              Ethiopia's leading AI-powered bus booking platform. We connect travelers with reliable, comfortable, and
+              Ethiopia's leading online bus booking platform. We connect travelers with reliable, comfortable, and
               affordable bus services across the country. Experience the future of travel with real-time tracking,
               secure payments, and 24/7 customer support.
             </p>

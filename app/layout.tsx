@@ -14,9 +14,9 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "AI-Powered Transport Management System",
+  title: "Tequazhe Transport Management System",
   description: "Book, manage, and track your bus journeys with ease",
-  generator: "ai-powered-transportation-system.dev",
+  generator: "Teguazhe-transportation-system.dev",
 };
 
 export default function RootLayout({

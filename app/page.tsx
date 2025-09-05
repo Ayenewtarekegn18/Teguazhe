@@ -321,7 +321,7 @@ export default function HomePage() {
                 animationDelay: "0.2s",
               }}
             >
-              AI-Powered Bus Booking
+              Seemless Bus Booking
             </h1>
             <p
               className={`text-xl max-w-2xl mx-auto font-urbanist-medium transition-all duration-1000 ${
