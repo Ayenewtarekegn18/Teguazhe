@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Modern Travel Theme Color Palette */
+    --primary-blue: #2563eb;
+    /* Trust, reliability */
+    --primary-blue-dark: #1d4ed8;
+    --primary-blue-light: #3b82f6;
+    --secondary-teal: #0d9488;
+    /* Fresh, modern */
+    --secondary-teal-dark: #0f766e;
+    --secondary-teal-light: #14b8a6;
+    --accent-orange: #f97316;
+    /* Energy, excitement */
+    --accent-orange-dark: #ea580c;
+    --accent-orange-light: #fb923c;
+    --neutral-50: #f8fafc;
+    --neutral-100: #f1f5f9;
+    --neutral-200: #e2e8f0;
+    --neutral-300: #cbd5e1;
+    --neutral-400: #94a3b8;
+    --neutral-500: #64748b;
+    --neutral-600: #475569;
+    --neutral-700: #334155;
+    --neutral-800: #1e293b;
+    --neutral-900: #0f172a;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+
+    /* shadcn/ui variables mapped to our new colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
+
+    /* Typography */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --font-heading: 'Poppins', var(--font-sans);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 20% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 20% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142.1 76.2% 36.3%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-urbanist), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Card Styles */
+.card {
+  @apply bg-card text-card-foreground rounded-lg border shadow-sm transition-all duration-200;
+}
+
+.card-hover {
+  @apply hover:shadow-md hover:border-primary/20 hover:-translate-y-0.5;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors;
+}
+
+.btn-accent {
+  @apply bg-accent text-accent-foreground hover:bg-accent/90 transition-colors;
+}
+
+/* Badge Styles */
+.badge {
+  @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+}
+
+.badge-primary {
+  @apply bg-primary/10 text-primary;
+}
+
+.badge-secondary {
+  @apply bg-secondary/10 text-secondary;
+}
+
+.badge-accent {
+  @apply bg-accent/10 text-accent;
+}
+
+/* Mobile App Promotion Banner */
+.app-promo-banner {
+  @apply fixed bottom-0 left-0 right-0 bg-primary text-primary-foreground p-4 z-50;
+  backdrop-filter: blur(8px);
+}
+
+/* Testimonial Carousel */
+.testimonial-card {
+  @apply bg-card p-6 rounded-lg border shadow-sm;
+}
+
+/* Route Card */
+.route-card {
+  @apply bg-card p-4 rounded-lg border shadow-sm hover:shadow-md transition-all duration-200;
+}
+
+/* Accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+}
+
+/* Responsive Typography */
+@screen sm {
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+}
+
+@screen md {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+}
+
+/* Font weight utility classes */
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* Typography styles */
+h1,
+.h1 {
+  @apply text-7xl font-extralight;
+}
+
+h2,
+.h2 {
+  @apply text-5xl font-extralight;
+}
+
+h3,
+.h3 {
+  @apply text-4xl font-light;
+}
+
+h4,
+.h4 {
+  @apply text-2xl font-light;
+}
+
+p,
+.body {
+  @apply text-base font-light;
+}
+
+.button {
+  @apply font-medium;
+}
+
+.card-title {
+  @apply text-xl font-extralight;
+}
+
+.card-description {
+  @apply text-sm font-extralight;
+}
